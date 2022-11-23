@@ -1,0 +1,12 @@
+#!/bin/bash
+# Unpause all paused print queues
+# Thijs v Vught
+
+# Check printer list for paused printers, unpause them
+/usr/bin/lpstat -p | /usr/bin/grep disabled | /usr/bin/awk '{print $2}' | while read -r PRINTER
+do
+/bin/echo "Clearing $PRINTER"
+/usr/sbin/cupsenable "$PRINTER"
+done
+
+exit 0
