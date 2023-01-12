@@ -1,4 +1,4 @@
 # Scripts JAMF
 
-Jamf scripts for everyone \n\n\
+Jamf scripts for everyone \
 Some are in SwiftDialog
